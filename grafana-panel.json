@@ -1,0 +1,81 @@
+{
+  "circleMaxSize": "15",
+  "circleMinSize": 2,
+  "colors": [
+    "#8AB8FF",
+    "#5794F2"
+  ],
+  "datasource": "Prometheus",
+  "esLocationName": "longitude",
+  "esMetric": "Count",
+  "fieldConfig": {
+    "defaults": {
+      "custom": {
+        "align": null
+      },
+      "mappings": [],
+      "thresholds": {
+        "mode": "absolute",
+        "steps": [
+          {
+            "color": "green",
+            "value": null
+          },
+          {
+            "color": "red",
+            "value": 80
+          }
+        ]
+      }
+    },
+    "overrides": []
+  },
+  "gridPos": {
+    "h": 12,
+    "w": 10,
+    "x": 0,
+    "y": 8
+  },
+  "hideZero": true,
+  "id": 20,
+  "initialZoom": "1",
+  "locationData": "table",
+  "mapCenter": "(0°, 0°)",
+  "maxDataPoints": 1,
+  "pluginVersion": "7.0.6",
+  "tableQueryOptions": {
+    "geohashField": "geohash",
+    "labelField": "domain",
+    "latitudeField": "latitude",
+    "longitudeField": "longitude",
+    "metricField": "Value",
+    "queryType": "coordinates"
+  },
+  "targets": [
+    {
+      "expr": "pihole_adv_domains",
+      "format": "table",
+      "instant": true,
+      "interval": "",
+      "legendFormat": "{{domain}}",
+      "refId": "A"
+    }
+  ],
+  "title": "Locations Queried",
+  "type": "grafana-worldmap-panel",
+  "unitPlural": "queries",
+  "unitSingular": "query",
+  "valueName": "current",
+  "decimals": 0,
+  "esGeoPoint": "",
+  "hideEmpty": false,
+  "mapCenterLatitude": 0,
+  "mapCenterLongitude": 0,
+  "mouseWheelZoom": false,
+  "showLegend": false,
+  "stickyLabels": false,
+  "thresholds": "",
+  "timeFrom": null,
+  "timeShift": null,
+  "unitSingle": ""
+}
